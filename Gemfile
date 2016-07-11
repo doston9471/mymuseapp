@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.3.1'
 gem 'rails', '4.2.6'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
@@ -21,8 +21,13 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'devise', '~> 4.1'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'mini_portile2'
